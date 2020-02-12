@@ -1,0 +1,139 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.testemoinial {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 2rem;
+}
+
+.testemoinial .title {
+  text-align: center;
+}
+
+.testemoinial .person {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+.testemoinial .person .name {
+  font-size: 24px;
+}
+
+.testemoinial .person img {
+  border-radius: 50%;
+}
+
+.testemoinial .commentaire {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: lightgray;
+  border-radius: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .testemoinial {
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-gap: 1rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+        grid-template-areas: "title title" "person commentaire";
+  }
+  .testemoinial .title {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: title;
+  }
+  .testemoinial .person {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: person;
+  }
+  .testemoinial .commentaire {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: commentaire;
+  }
+}
+
+.pricing {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 2rem;
+}
+
+.pricing .title {
+  text-align: center;
+}
+
+.pricing .s1, .pricing .s2, .pricing .s3 {
+  border: 1px solid black;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  border-radius: 20px;
+  margin: 1rem;
+  -webkit-box-shadow: 2px 2px 5px gray;
+          box-shadow: 2px 2px 5px gray;
+}
+
+.pricing .s1 .pack, .pricing .s2 .pack, .pricing .s3 .pack {
+  font-size: 24px;
+  text-align: center;
+  padding-top: 3rem;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(blue), to(#75dfff));
+  background-image: linear-gradient(to top, blue, #75dfff);
+  border-radius: 50%;
+  height: 100px;
+  width: 150px;
+}
+
+.pricing .s1 .ul, .pricing .s2 .ul, .pricing .s3 .ul {
+  line-height: 36px;
+}
+
+.pricing .s1 .ul li, .pricing .s2 .ul li, .pricing .s3 .ul li {
+  list-style-type: none;
+}
+
+.pricing .s1 .detail, .pricing .s2 .detail, .pricing .s3 .detail {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(blue), to(#75dfff));
+  background-image: linear-gradient(to bottom, blue, #75dfff);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  width: 90px;
+  height: 42px;
+  padding: 1rem 0rem 0rem 2rem;
+}
+
+.pricing .s1 .detail a, .pricing .s2 .detail a, .pricing .s3 .detail a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .pricing {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  .pricing .title {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+}
+/*# sourceMappingURL=style.css.map */

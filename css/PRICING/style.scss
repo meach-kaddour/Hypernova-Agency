@@ -1,0 +1,71 @@
+@import "./mixins";
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+.testemoinial{
+    display: grid;
+    margin-top: 2rem;
+    .title{
+        text-align: center;
+    }
+    .person{
+        display: grid;
+        justify-items: center;
+        .name{
+            font-size: 24px;
+        }
+        img{
+            border-radius: 50%;
+            
+        }
+    }
+    .commentaire{
+        margin: 1rem;
+        padding: 1rem;
+        background-color: lightgray;
+        border-radius: 20px;
+
+
+    }
+    // RESPONSIVE-TABLETT
+    @include TAB{
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-gap: 1rem;
+        align-items: center;
+        grid-template-areas:"title title"
+                            "person commentaire";
+
+        .title{ grid-area: title;}
+        .person{ grid-area: person;}
+        .commentaire{ grid-area: commentaire;}
+    }
+    // END RESPONSIVE-TABLETTE
+}
+.pricing{
+    display: grid;
+    margin-top: 2rem;
+    .title{
+        text-align: center;
+    }
+
+    .s1,.s2,.s3{
+        @include section();
+    }
+    
+    @include TAB{
+        grid-template-columns: 1fr ;
+
+        grid-gap: 1rem;
+        .title{
+            grid-column: 1/4;
+            grid-row: 1/2;
+        }
+       
+    }       
+}
+
